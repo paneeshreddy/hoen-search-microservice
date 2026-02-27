@@ -1,13 +1,27 @@
-# HoenSearch
+# Hoen Search Microservice
 
-How to start the HoenSearch application
+## Overview
+
+Hoen Search is a Dropwizard-based Java microservice designed to provide hotel and rental car search results for cities in the Hoen Archipelago.
+
+The service exposes a REST API endpoint that accepts a city as a query parameter and returns matching hotels and rental car services.
+
 ---
 
-1. Run `mvn clean install` to build your application
-1. Start application with `java -jar target/hoen-search-1.0-SNAPSHOT.jar server config.yml`
-1. To check that your application is running enter url `http://localhost:8080`
+## Architecture
 
-Health Check
+- Built using **Java + Dropwizard**
+- Exposes a REST endpoint: `/search`
+- Accepts query parameter: `city`
+- Returns JSON response
+- Runs on embedded Jetty server
+- Includes Dropwizard admin & healthcheck endpoints
+
 ---
 
-To see your applications health enter url `http://localhost:8081/healthcheck`
+## How to Build
+
+Run the following command:
+
+```bash
+mvn clean install
